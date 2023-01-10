@@ -1,0 +1,10 @@
+name: Animal Types Contract
+description: Get all type of farm animals
+request:
+  url: /farm/animals
+  method: GET
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  bodyFromFile: responses/get_farm_animals.json
