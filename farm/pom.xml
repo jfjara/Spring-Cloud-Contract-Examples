@@ -17,6 +17,8 @@
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.5</spring-cloud.version>
 		<spring-boot.version>2.7.7</spring-boot.version>
+		<org.springframework.cloud.version>3.1.5</org.springframework.cloud.version>
+		<org.apache.maven.plugins.version>3.5.1</org.apache.maven.plugins.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -59,7 +61,7 @@
 			<plugin>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
-				<version>3.1.5</version>
+				<version>${org.springframework.cloud.version}</version>
 				<extensions>true</extensions>
 				<configuration>
 					<testFramework>JUNIT5</testFramework>
@@ -81,10 +83,10 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.5.1</version>
+				<version>${org.apache.maven.plugins.version}</version>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 		</plugins>
